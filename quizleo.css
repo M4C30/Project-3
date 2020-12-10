@@ -75,3 +75,9 @@ nav{
    #startknop{
        font-size: x-large;
    }
+   .quizvraag{
+       display: none;
+   }
+   .quizvraagtoon{
+       display: block;
+   }
