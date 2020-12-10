@@ -1,9 +1,11 @@
+body{
+    font-family: 'PT Serif', serif;
+}
+
 nav{
- 
     text-align: center;
     background-color: black;
     height: 110px;
-    
    }
     
    ul{

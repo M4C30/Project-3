@@ -1,9 +1,10 @@
+body{
+    font-family:'PT Serif', serif;
+}
 nav{
- 
     text-align: center;
     background-color: black;
     height: 110px;
-    
    }
     
    ul{
@@ -58,3 +59,19 @@ nav{
     transform: scaleX(0.5);
    }
     
+   h1{
+       text-align: center;
+   }
+   .button{
+        
+   }
+   #klik{
+    width: 350px;
+    height:150px;
+    background-color:#55D9B4;
+    margin-left: 41%;
+    margin-top: 10%;
+   }
+   #startknop{
+       font-size: x-large;
+   }
