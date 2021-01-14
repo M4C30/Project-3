@@ -84,7 +84,7 @@ submitKnop.addEventListener('click',() =>{
         if(huidigeVraag < quizData.length){
                 loadQuiz();
         } else {
-                alert('je hebt alle vragen beantwoord')
+                alert('je hebt alle vragen beantwoord. ik was nog niet aan een antwoorden checker toegekomen.')
         }
    
 }
