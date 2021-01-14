@@ -64,6 +64,8 @@ nav{
     margin-left: 35%;
     border: 3px dotted black; 
     margin-top: 1.5%; 
+    background-color: #000;
+    color: #55D9B4;
    }
    .div{
        text-align: center;
