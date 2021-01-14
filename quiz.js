@@ -43,7 +43,11 @@ const quizData = [
             correct: 'b'
     },{
             question: 'Op welke leeftijd kreeg Ashley haar eerste kusje?',
-            a: ''
+            a: '13',
+            b: '14',
+            c: '15',
+            d: '12',
+            correct: 'b'
 
     }
 

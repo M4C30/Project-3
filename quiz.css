@@ -48,3 +48,7 @@ button{
 button:hover{
     background-color: #6A5ACD;
 }
+#homebutton{
+    float: left;
+    margin-left: 0px;
+}
