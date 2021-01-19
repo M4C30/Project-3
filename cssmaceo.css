@@ -1,52 +1,167 @@
-*{
-font-family: Arial, Helvetica, sans-serif;
-}
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
+
 
 body{
-    background-color: #55D9B4;
-    
+	font-size: 20px;
+	font-family: 'Work Sans', sans-serif;
+	color: #333;
+  font-weight: 300;
+  background-color: #48D1CC;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+ul{
+  text-align: center;
+}
+
 h1{
-    text-align: center;
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
 }
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+button{
+  font-family: 'Work Sans', sans-serif;
+	font-size: 22px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+  padding: 20px;
+	cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 7px #666;
+  outline: none;
+}
+button:hover{
+  background-color: #38a;
+  outline: none;
+}
+button:active{
+  box-shadow: 0 4px #666;
+  transform: translateY(4px);
+}
+
+#submit{
+  margin-top: 50px;
+  outline: none;
+}
+
+#next{
+  margin-top: 50px;
+  outline: none;
+}
+#bigquiz{
+  width: 800px;
+  height: 550px;
+  background-color: rgb(243, 247, 223);
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#quiz{
+ padding: 10px;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#previous{
+  outline: none;
+}
+
+img{
+  width: 200px;
+  margin-right: 550px;
+  margin-top: 210px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.container{
+  position: relative;
+}
+
+.slide{
+  position: absolute;
+  margin-top: 90px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
 .knop{
-    width: 400px;
-    height: 250px;
-    background-color: greenyellow;
-    border: none;
-    margin-left: 39%;
-    margin-right: 10%;
-    margin-bottom: 10%;
-    margin-top: 10%;
-    font-size: 100px;
-    border-radius: 8px;
-    opacity: 1;
-    transition: opacity 2s linear;
-    cursor: pointer;
-    box-shadow: 0 10px #666;
+  width: 400px;
+  height: 250px;
+  background-color: #279;
+  border: none;
+  margin-left: 39%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  font-size: 100px;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 2s linear;
+  cursor: pointer;
+  box-shadow: 0 10px #666;
+  outline: none;
+  position: absolute;
 }
 .knop_klik{
-    width: 400px;
-    height: 250px;
-    background-color: greenyellow;
-    border: none;
-    margin-left: 39%;
-    margin-right: 10%;
-    margin-bottom: 10%;
-    margin-top: 10%;
-    font-size: 100px;
-    border-radius: 8px;
-    opacity: 0;
-    transition: visibility 0s 2s, opacity 0.4s linear;
-    box-shadow: 0 10px #666;
+  width: 400px;
+  height: 250px;
+  background-color: #279;
+  border: none;
+  margin-left: 39%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  font-size: 100px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 0.4s linear;
+  box-shadow: 0 10px #666;
+  outline: none;
 }
 
 .knop:hover{
-    background-color:#97de2a;
+  background-color: rgb(46, 152, 194);
+  outline: none;
 }
 
 .knop:active{
-    background-color: #97de2a;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  background-color: #279;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+outline: none;
 }
