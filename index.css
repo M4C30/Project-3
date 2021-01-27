@@ -63,15 +63,18 @@ nav{
     float: left;
     margin-left: 35%;
     border: 3px dotted black; 
-    margin-top: 1.5%; 
+    margin-top: 1%; 
     background-color: white;
     color: #55D9B4;
    }
-   .div{
-       text-align: center;
-       border: 3px dotted black; 
-       height: 110px;
-   }
+   
    #serieDiv{
        margin-left: 25%;
+       margin-top: 10%;
+       border: none;
+
+   }
+   #netflix{
+       height: 250px;
+       width: 200px;
    }

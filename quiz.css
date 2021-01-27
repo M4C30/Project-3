@@ -1,3 +1,4 @@
+
 body{
     background-color: #48D1CC;
     min-height: 100vh;
@@ -33,9 +34,10 @@ ul{
 ul li{
     font-size: 1.1rem;
     margin: 1rem 0;
-    
 }
-
+ul li label{
+    cursor: pointer;
+}
 button{
     background-color:#483D8B ;
     color: white;
@@ -45,15 +47,13 @@ button{
     padding: 1.3rem;
     border: none;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 button:hover{
     background-color: #6A5ACD;
 }
-#homebutton{
+#home{
     float: left;
     margin-left: 0px;
-}
-#home{
-
 }
