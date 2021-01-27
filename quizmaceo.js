@@ -105,6 +105,9 @@
         if (currentSlide === 6) {
             img.src = "images/freddie.jpg";
         }
+        if (currentSlide === 7) {
+            img.src = "images/wap.jpg";
+        }
 
         else {
             previousButton.style.display = 'inline-block';
@@ -203,6 +206,15 @@
                 C: "'...pushed him away from my bed.'"
             },
             correctAnswer: "B"
+        },
+        {
+            question: "<label>Waar staat 'WAP' voor?</label>",
+            answers: {
+                A: "Weaponized Assault Penguin",
+                B: "Wanking At Pussy",
+                C: "Wet Ass Pussy"
+            },
+            correctAnswer: "C"
         }
     ];
 
