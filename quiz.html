@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="quiz.css">
+
 </head>
 <body>
-    <a id="homebutton" href="index.html"><h3>Home</h3></a>
-    <div class="quiz-container">
+    <nav>
+        <ul id="navigation">
+            <li id="oop"><a class="poop" href="index.html">Home</a></li>
+            <li id="oop"><a class="poop" href="quiz.html">Quiz Film's & series</a></li>
+            <li id="oop"><a class="poop" href="maceoindex.html">Quiz Muziek</a></li>
+          </ul>
+        </nav>
+
+    <div class="quiz-container" id="quiz">
         <div class="quiz-header">
-            <h2 id="vraag">Question text</h2>
-            <ul>
-                <li>
-                    <input type="radio" id="a" name="answer">
+            <h2 id="question">Question text</h2>
+            <ul id="ul">
+                <li class="li">
+                    <input type="radio" id="a" name="answer" class="answer">
                     <label id="a_text" for="a">Question</label>
                 </li>
-                <li>
-                    <input type="radio" id="b" name="answer">
+                <li class="li">
+                    <input type="radio" id="b" name="answer" class="answer">
                     <label id="b_text" for="b">Question</label>
                 </li>
-                <li>
-                    <input type="radio" id="c" name="answer">
+                <li class="li">
+                    <input type="radio" id="c" name="answer" class="answer">
                     <label id="c_text" for="c">Question</label>
                 </li>
-                <li>
-                    <input type="radio" id="d" name="answer">
+                <li class="li">
+                    <input type="radio" id="d" name="answer" class="answer">
                     <label id="d_text" for="d">Question</label>
                 </li>
             </ul>

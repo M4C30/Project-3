@@ -37,8 +37,8 @@ const quizData = [
     },{
             question: 'Wat voor werk doet Uncle Phill?',
             a: 'Advocaat',
-            b: 'rechter',
-            c: 'werkloos',
+            b: 'Rechter',
+            c: 'Werkloos',
             d: 'Hotel eigenaar',
             correct: 'b'
     },{
@@ -48,45 +48,78 @@ const quizData = [
             c: '15',
             d: '12',
             correct: 'b'
-
+    },{
+            question: 'Hoezo ging de familie verhuizen?',
+            a: 'Ze kregen nog een kind',
+            b: 'ze konden het huis niet meer betalen',
+            c: 'Ze voelden zich niet meer veilig',
+            d: 'De kinderen gingen het huis uit, en het huis was te groot voor met zn 2en',
+            correct: 'a'
     }
-
-
 ];
 
-const quistionEL = document.getElementById('vraag');
+const quiz = document.getElementById("quiz");
+const answersEls = document.querySelectorAll(".answer");
 
-const a_text = document.getElementById('a_text');
+
+const questionEL = document.getElementById('question');
+const a_text = document.getElementById('a_text'); 
 const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
-const d_text = document.getElementById('d_text');
-const e_text = document.getElementById('e_text');
-const submitKnop = document.getElementById('knop');
+const d_text = document.getElementById('d_text'); 
+const submitBtn = document.getElementById('knop')
 
-let huidigeVraag = 0;
+
+let currentQuiz = 0;
+let score = 0;
 
 loadQuiz();
+ 
+function loadQuiz(){
+        deselectAnswers()
+        const currentQuizData = quizData[currentQuiz];
 
-function loadQuiz()  {
-        const huidigeVraagData = quizData[huidigeVraag]
-        quistionEL.innerText = huidigeVraagData.question;
+         questionEL.innerText = currentQuizData.question;
 
-        a_text.innerText = huidigeVraagData.a;
-        b_text.innerText = huidigeVraagData.b;
-        c_text.innerText = huidigeVraagData.c;
-        d_text.innerText = huidigeVraagData.d;
-
+         a_text.innerText = currentQuizData.a;
+         b_text.innerText = currentQuizData.b;
+         c_text.innerText = currentQuizData.c;
+         d_text.innerText = currentQuizData.d;
 }
 
-submitKnop.addEventListener('click',() =>{
-        huidigeVraag++;
+function getSelected() {
+        let answer = undefined
 
-        if(huidigeVraag < quizData.length){
-                loadQuiz();
-        } else {
-                alert('je hebt alle vragen beantwoord. ik was nog niet aan een antwoorden checker toegekomen.')
-        }
-   
+         answersEls.forEach((answerEl) => {
+                if(answerEl .checked) {
+                        answer = answerEl.id;
+                }
+         });
+         return answer;
 }
 
-)
+function deselectAnswers() {
+        answersEls.forEach((answerEl) => {
+               answerEl.checked = false;
+         });
+}
+
+submitBtn.addEventListener("click", () => {
+        const answer = getSelected();
+
+        if(answer){
+                if(answer === quizData[currentQuiz].correct) {
+                        score++;
+                }
+         {
+                currentQuiz++;
+                if (currentQuiz < quizData.length){
+                        loadQuiz();
+                        } else (
+                      quiz.innerHTML = `<h2>Je hebt ${score}/${quizData.length} vragen goed beantwoord! </h2> 
+                      <button onclick = "location.reload()">Opnieuw spelen?</button>` 
+                              )
+                      }
+                }
+        })      
+        
