@@ -82,13 +82,16 @@
         currentSlide = n;
         if (currentSlide === 0) {
             previousButton.style.visibility = 'hidden';
+            againButton.style.visibility = 'hidden';
         }
         if (currentSlide === 0) {
             img.src = "images/eminem.jpg";
+            
         }
         if (currentSlide === 1) {
             img.src = "images/steviewonder.jpg";
             previousButton.style.visibility = 'visible';
+            
         }
         if (currentSlide === 2) {
             img.src = "images/childish gambino.jpg";
@@ -108,6 +111,16 @@
         if (currentSlide === 7) {
             img.src = "images/wap.jpg";
         }
+        if (currentSlide === 8) {
+            img.src = "images/rihanna.jpg"
+        }
+        if (currentSlide === 9) {
+            img.src = "images/id.jpg"
+        }
+        if (currentSlide === 9) {
+            againButton.style.visibility = 'visible'
+        }
+        
 
         else {
             previousButton.style.display = 'inline-block';
@@ -215,6 +228,24 @@
                 C: "Wet Ass Pussy"
             },
             correctAnswer: "C"
+        },
+        {
+            question: "<label>Wanneer kwam Rihanna's 'Umbrella' uit?</label>",
+            answers:{
+                A:"2009",
+                B:"2008",
+                C:"2007"
+            },
+            correctAnswer: "B"
+        },
+        {
+            question: "<label id='imagine'>Wanneer kwam Imagine Dragons met het nummer 'Believer'?</label>",
+            answers:{
+                A:"2015",
+                B:"2017",
+                C:"2012"
+            },
+            correctAnswer:"C"
         }
     ];
 
@@ -236,6 +267,7 @@
     const previousButton = document.getElementById("previous");
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
+    const againButton = document.getElementById("again");
     let currentSlide = 0;
 
     // Show the first slide
@@ -246,4 +278,9 @@
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
 })();
+
+function again(){
+    location.reload();
+}
+
 
